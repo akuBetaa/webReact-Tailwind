@@ -1,7 +1,10 @@
 import React from 'react'
 
 const Button = (props) => {
-    const { children = "Login", variant = "bg-primary text-white hover:bg-textblack", style} = props;
+    const {
+        children = "Login",
+        variant = "bg-primary text-white hover:bg-textblack",
+        style } = props;
 
     return (
         <div>

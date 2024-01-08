@@ -13,6 +13,7 @@ export default {
         transparent: 'transparent',
         'bg' : '#FFFFFF',
         'primary' : '#4D77FF',
+        'secondary' : '#EDF1FF',
         'textblack' : '#121212',
         'textgrey' : '#696969',
       },
