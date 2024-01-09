@@ -1,5 +1,4 @@
 import React from "react";
-import ImgArticle from "/src/assets/images/article-1.jpg";
 import { Link } from "react-router-dom";
 import Button from "../elements/Button";
 
@@ -15,10 +14,10 @@ const CardBlog = (props) => {
   );
 };
 
-const Header = () => {
+const Header = ( {image} ) => {
   return (
     <div>
-      <img src={ImgArticle} alt="article" className="rounded-t-lg" />
+      <img src={ image } alt="article" className="rounded-t-lg" />
     </div>
   )
 };
