@@ -20,7 +20,7 @@ const Dropdown = (props) => {
             </button>
 
             {isOpen && (
-                <div className='top-10 rounded-md bg-white py-2 shadow-md'>
+                <div className='absolute w-52 mt-14 top-10 rounded-md bg-white py-2 shadow-md'>
                     <ul>
                         <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Profil</li>
                         <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Dashboard</li>
@@ -32,4 +32,4 @@ const Dropdown = (props) => {
     )
 }
 
-export default Dropdown
+export default Dropdown;

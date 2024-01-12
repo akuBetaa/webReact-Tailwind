@@ -9,11 +9,12 @@ import RegisterPage from './pages/RegisterPage.jsx'
 import ErrorPage from './pages/404Page.jsx'
 import BlogPage from './pages/BlogPage.jsx'
 import Profil from './components/elements/Profil/index.jsx'
+import Navbar from './components/fragments/Navbar.jsx'
 
 const router = createBrowserRouter([
   {
     path : "/",
-    element : <div className='flex justify-center content-center my-10'><Profil /></div>,
+    element : <div className='flex justify-center content-center'> <Navbar/> </div>,
     errorElement : <ErrorPage/>
   },
   {

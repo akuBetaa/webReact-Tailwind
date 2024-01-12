@@ -37,6 +37,14 @@ const FormRegister = () => {
                 Confirm Password
             </InputForm>
 
+            <InputForm
+                name="role"
+                type="text"
+                placeholder="admin/user"
+                style="bg-[#EDF1FF] placeholder:text-primary box-decoration-none">
+                Role
+            </InputForm>
+
             <Button style="w-full">Register</Button>
         </form>
   )

@@ -3,6 +3,10 @@ import InputForm from '../elements/input';
 import Button from '../elements/Button';
 
 const FormLogin = () => {
+    const handleLogin = () => {
+        console.log('login');
+    }
+    
     return (
         <form action="">
             <InputForm
@@ -21,7 +25,7 @@ const FormLogin = () => {
                 Password
             </InputForm>
 
-            <Button style="w-full"></Button>
+            <Button style="w-full" onClick={handleLogin}></Button>
         </form>
     )
 }
