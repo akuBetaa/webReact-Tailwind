@@ -4,17 +4,17 @@ const Button = (props) => {
     const {
         children = "Login",
         variant = "bg-primary text-white hover:bg-textblack",
-        style,
-        OnClick } = props;
+        style, type = "button",
+        onClick = () => {} } = props;
 
     return (
         <div>
             <button className={`px-6 py-2 ${variant} ${style} rounded-md text-base`}
-                                type='button'
-                                onClick={ () => OnClick()}>
+                                type={type}
+                                onClick={ () => onClick()}>
                 {children}
             </button>
-        </div>
+        </div>  
     )
 }
 

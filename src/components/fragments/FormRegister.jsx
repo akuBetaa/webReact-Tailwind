@@ -3,8 +3,14 @@ import InputForm from '../elements/input';
 import Button from '../elements/Button';
 
 const FormRegister = () => {
-  return (
-    <form action="">
+    const handleRegister = (e) => {
+        e.preventDefault();
+        console.log(e.target.fullname.value);
+        console.log("Register Berhasil")
+    }
+
+    return (
+        <form onSubmit={handleRegister}>
             <InputForm
                 name="fullname"
                 type="text"
@@ -12,7 +18,7 @@ const FormRegister = () => {
                 style="bg-[#EDF1FF] placeholder:text-primary">
                 Full Name
             </InputForm>
-
+ 
             <InputForm
                 name="email"
                 type="email"
@@ -45,9 +51,9 @@ const FormRegister = () => {
                 Role
             </InputForm>
 
-            <Button style="w-full">Register</Button>
+            <Button style="w-full" type="submit">Register</Button>
         </form>
-  )
+    )
 }
 
 export default FormRegister

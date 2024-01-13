@@ -10,11 +10,15 @@ import ErrorPage from './pages/404Page.jsx'
 import BlogPage from './pages/BlogPage.jsx'
 import Profil from './components/elements/Profil/index.jsx'
 import Navbar from './components/fragments/Navbar.jsx'
+import PageLayouts from './components/layouts/PageLayouts.jsx'
 
 const router = createBrowserRouter([
   {
     path : "/",
-    element : <div className='flex justify-center content-center'> <Navbar/> </div>,
+    element : 
+    <div className='flex justify-center content-center'> 
+      <Navbar/>
+      </div>,
     errorElement : <ErrorPage/>
   },
   {
