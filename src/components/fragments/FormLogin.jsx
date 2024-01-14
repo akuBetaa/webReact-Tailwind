@@ -8,11 +8,17 @@ const FormLogin = () => {
         //cegah browser memuat ulang saat di klik
         event.preventDefault();
 
+        //menyimpan inputan/data pada localStorage
+        localStorage.setItem('email', event.target.email.value);
+        localStorage.setItem('password', event.target.password.value);
+
         //untuk menampilkan inputan pada console
         console.log(event.target.email.value);
         console.log(event.target.password.value);
 
         console.log('Anda Berhasil Login');
+
+        window.location.href = '/blog';
     }
 
 
@@ -43,4 +49,4 @@ const FormLogin = () => {
     )
 }
 
-export default FormLogin
+export default FormLogin;

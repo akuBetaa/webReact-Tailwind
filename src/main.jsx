@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     element : 
     <div className='flex justify-center content-center'> 
       <Navbar/>
+
       </div>,
     errorElement : <ErrorPage/>
   },

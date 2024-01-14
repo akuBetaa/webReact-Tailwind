@@ -8,6 +8,12 @@ const Dropdown = (props) => {
         setIsOpen(!isOpen);
     }
 
+    const handleLogout = () => {
+        localStorage.removeItem('email');
+        localStorage.removeItem('password');
+        window.location.href = '/';
+    }
+
     return (
         <div>
             <button
@@ -24,7 +30,7 @@ const Dropdown = (props) => {
                     <ul>
                         <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Profil</li>
                         <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Dashboard</li>
-                        <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Logout</li>
+                        <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer' onClick={handleLogout}>Logout</li>
                     </ul>
                 </div>
             )}

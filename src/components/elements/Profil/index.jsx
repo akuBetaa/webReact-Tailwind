@@ -1,19 +1,24 @@
 import React from 'react'
 import Dropdown from './Dropdown'
+import Button from '../Button';
+import { Link } from 'react-router-dom';
 
+const email = localStorage.getItem('email');
 
 const Profil = () => {
     return (
         <>
-            <Dropdown>
-                <Account />
-            </Dropdown>
+            {email === null ? 
+            <Link to={"/login"}><Button /></Link> :
+                <Dropdown>
+                    <Account />
+                </Dropdown>
+            }
         </>
     )
 }
 
 const Account = () => {
-
     return (
         <div className='flex items-center gap-2'>
             <img
@@ -23,7 +28,7 @@ const Account = () => {
             />
 
             <div className=''>
-                <h3 className='text-base font-semibold'>Beta Nurul Awwalin</h3>
+                <h3 className='text-base font-semibold'>{email}</h3>
                 <p className='text-xs'>User</p>
             </div>
         </div>
