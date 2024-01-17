@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Logo from '../../assets/logo-tb.png';
 import Profil from '../elements/Profil';
-import { FiMenu, FiChevronDown, FiX } from 'react-icons/fi'
+import { FiMenu, FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
 import Button from '../elements/Button';
 
@@ -49,15 +49,15 @@ const Navbar = () => {
 
                 <section className='flex gap-4 items-center'>
                     {/* avatar image */}
-                    {/* <Profil /> */}
-                    <div className='flex gap-1 items-center'>
+                    <Profil />
+                    {/* <div className='flex gap-1 items-center'>
                         <img src="/src/assets/images/article-1.jpg" className="rounded-full w-10 h-10" alt="" />
                         <FiChevronDown className='text-xl' />
                     </div>
 
                     <Link to={"/login"}>
                         <Button style="hidden md:block">Masuk</Button>
-                    </Link>
+                    </Link> */}
 
                     {/* icons menu  */}
                     <FiMenu className='text-3xl cursor-pointer md:hidden' onClick={toggleMenu} />
@@ -92,13 +92,5 @@ const Navbar = () => {
         </main>
     )
 }
-
-// const Nav = ( { type } ) => {
-//     if (type === "admin") {
-//         return <h1 className="text-white text-2xl font-bold">Dashboard</h1>
-//     } else {
-//         return <h1 className="text-white text-2xl font-bold">Navbar</h1>
-//     }
-// }
 
 export default Navbar
