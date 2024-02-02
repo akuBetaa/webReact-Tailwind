@@ -9,8 +9,9 @@ const email = localStorage.getItem('email');
 const Profil = () => {
     return (
         <>
-            {email === null ? 
-            <Link to={"/login"} className='hidden md:block'><Button /></Link> :
+            {/* OPERATOR TERNARY  */}
+            {email === null ?
+                <Link to={"/login"} className='hidden md:block'><Button /></Link> :
                 <Dropdown>
                     <Account />
                 </Dropdown>

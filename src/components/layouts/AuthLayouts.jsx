@@ -11,9 +11,6 @@ const AuthLayouts = (props) => {
 
     return (
         <div className='flex min-h-screen w-full '>
-            {/* gambar disamping*/}
-            {/* <div className='bg-primary w-2/4 hidden sm:block'></div> */}
-
             {/* konten form  */}
             <div className='max-w-xs flex flex-col mx-auto place-content-center '>
                 <img src={LogoTB} className="w-3/4 my-4 mx-auto" alt="" />

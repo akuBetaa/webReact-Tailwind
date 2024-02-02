@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Dropdown = (props) => {
     const { children } = props;
@@ -26,10 +27,12 @@ const Dropdown = (props) => {
             </button>
 
             {isOpen && (
-                <div className='absolute w-52 mt-14 top-10 rounded-md bg-white py-2 shadow-md'>
+                <div className='absolute w-52 mt-14 top-10 right-8 rounded-md bg-white py-2 shadow-lg'>
                     <ul>
                         <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Profil</li>
-                        <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Dashboard</li>
+                        <Link to={'/dashboard'}>
+                         <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer'>Dashboard</li>
+                        </Link>
                         <li className='px-4 py-2 hover:bg-gray-100 cursor-pointer' onClick={handleLogout}>Logout</li>
                     </ul>
                 </div>

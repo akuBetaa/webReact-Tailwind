@@ -8,17 +8,16 @@ import LoginPage from './pages/LoginPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
 import ErrorPage from './pages/404Page.jsx'
 import BlogPage from './pages/BlogPage.jsx'
-import Profil from './components/elements/Profil/index.jsx'
 import Navbar from './components/fragments/Navbar.jsx'
-import PageLayouts from './components/layouts/PageLayouts.jsx'
+import Sidebar from './components/fragments/Sidebar.jsx';
+import DashboardLayouts from './components/layouts/DashboardLayouts.jsx';
 
 const router = createBrowserRouter([
   {
     path : "/",
     element : 
-    <div className='flex justify-center content-center'> 
-      <Navbar/>
-
+    <div className=''> 
+        <Navbar />
       </div>,
     errorElement : <ErrorPage/>
   },
@@ -34,6 +33,10 @@ const router = createBrowserRouter([
     path : "/blog",
     element : <BlogPage/>
   },
+  {
+    path : "/dashboard",
+    element : <DashboardLayouts />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useDebugValue, useState } from 'react'
 import Logo from '../../assets/logo-tb.png';
 import Profil from '../elements/Profil';
 import { FiMenu, FiX } from 'react-icons/fi'
@@ -17,7 +17,7 @@ const Navbar = () => {
             label: "Beranda",
             path: "/",
         },
-        {
+        {    
             label: "Blog",
             path: "/blog",
         },
@@ -48,18 +48,8 @@ const Navbar = () => {
                 </div>
 
                 <section className='flex gap-4 items-center'>
-                    {/* avatar image */}
+                    {/* profil */}
                     <Profil />
-                    {/* <div className='flex gap-1 items-center'>
-                        <img src="/src/assets/images/article-1.jpg" className="rounded-full w-10 h-10" alt="" />
-                        <FiChevronDown className='text-xl' />
-                    </div>
-
-                    <Link to={"/login"}>
-                        <Button style="hidden md:block">Masuk</Button>
-                    </Link> */}
-
-                    {/* icons menu  */}
                     <FiMenu className='text-3xl cursor-pointer md:hidden' onClick={toggleMenu} />
                 </section>
 
@@ -93,4 +83,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
