@@ -11,14 +11,18 @@ import BlogPage from './pages/BlogPage.jsx'
 import Navbar from './components/fragments/Navbar.jsx'
 import Sidebar from './components/fragments/Sidebar.jsx';
 import DashboardLayouts from './components/layouts/DashboardLayouts.jsx';
+import { Footer } from './components/fragments/Footer.jsx'
+import App from './App.jsx'
 
 const router = createBrowserRouter([
   {
     path : "/",
-    element : 
-    <div className=''> 
-        <Navbar />
-      </div>,
+    element : <App />,
+    // <div className=''> 
+    //     <Navbar />
+    //     <div className='my-4'>d</div>
+    //     <Footer/>
+    //   </div>,
     errorElement : <ErrorPage/>
   },
   {

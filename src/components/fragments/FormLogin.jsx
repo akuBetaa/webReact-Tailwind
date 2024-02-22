@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import InputForm from '../elements/input';
 import Button from '../elements/Button';
 
-const FormLogin = () => { 
-    //penggunaan event handler
+const FormLogin = () => {
+    //penggunaan event handler untuk penyimpanan localhost.
     const handleLogin = (event) => {
         //cegah browser memuat ulang saat di klik
         event.preventDefault();
@@ -30,8 +30,8 @@ const FormLogin = () => {
                 placeholder="example@gmail.com"
                 style="bg-[#EDF1FF] placeholder:text-primary"
                 // value={email}
-                // onChange={(event) => setEmail(event.target.value)}
-                >
+                onChange={(e) => setEmail(e.target.value)}
+            >
                 Email/ Username
             </InputForm>
 
@@ -40,11 +40,15 @@ const FormLogin = () => {
                 type="password"
                 placeholder="*******"
                 style="bg-[#EDF1FF] placeholder:text-primary box-decoration-none"
-                >
+                // value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            >
                 Password
             </InputForm>
 
             <Button style="w-full" type="submit"></Button>
+
+            {/* {error && <p className="pt-3 text-red-500 text-sm justify-center flex">Email dan Password Salah</p>} */}
         </form>
     )
 }
