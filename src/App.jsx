@@ -3,12 +3,24 @@ import PageLayouts from './components/layouts/PageLayouts'
 import ImgMobile from './assets/images/mobile-1.png'
 import Button from './components/elements/Button'
 
+const Card = (props) => {
+  const { image, title } = props;
+
+  return (
+    <div className='flex flex-col p-2 justify-center items-center text-center text-white border border-blue-300 bg-blue-400 rounded'>
+      <img src={image} className='w-1/4 my-1' alt="" />
+      <h1 className='font-semibold text-xs tracking-wider'>{title}</h1>
+    </div>
+  )
+}
+
 const App = () => {
   return (
     <div>
       <PageLayouts>
+        {/* header  */}
         <div className='container mx-auto md:grid md:grid-cols-2'>
-          <div className='mx-6 flex flex-col justify-center'>
+          <div className='px-6 flex flex-col justify-center'>
             <h1 className='font-extrabold text-2xl tracking-wide md:text-4xl md:leading-normal md:tracking-wider'>
               Bantu Kesembuhanmu <br />
               Mari Eliminasi TBC mulai <br />
@@ -20,15 +32,34 @@ const App = () => {
             <Button variant="bg-[#292929] text-white text-sm hover:bg-[#191919] md:text-base">Gabung</Button>
           </div>
 
-          <div className='w-full bg-blue-500 h-32 flex items-end justify-end mt-[230px] md:hidden'>
-            <div className='container my-8 px-6 w-full flex justify-center'>
-              <img src={ImgMobile} className='w-2/5' alt="tampilan mobile" />
+          {/* tampilan mobile  */}
+          <div className='md:hidden'>
+            <div className='w-full bg-primary h-24 flex flex-col items-end justify-end mt-[250px]'>
+              <div className='container my-8 px-6 flex justify-center items-end gap-3'>
+                <img src={ImgMobile} className='w-2/5' alt="tampilan mobile" />
+                <img src={ImgMobile} className='w-1/3 h-3/4' alt="tampilan mobile" />
+              </div>
+            </div>
+            <div className='bg-primary px-6 py-5'>
+              <div className='text-center text-white pb-3'>
+                <p className='text-lg font-bold tracking-wide'>
+                  {/* Pejuang TB menemani proses kesembuhan dan membantu temukan teman seperjuangan untuk sembuh TB */}
+                  Fitur Pejuang TB
+                </p>
+              </div>
+              <div className='grid grid-cols-3 gap-3'>
+                <Card image="src/assets/icons/capsule-white.svg" title="Pengingat Minum Obat" />
+                <Card image="src/assets/icons/capsule-white.svg" title="Pengingat Minum Obat" />
+                <Card image="src/assets/icons/capsule-white.svg" title="Pengingat Minum Obat" />
+              </div>
             </div>
           </div>
 
 
-          <div className='container my-8 px-6 w-full md:flex justify-center hidden'>
-            <img src={ImgMobile} className='w-1/3' alt="tampilan mobile" />
+          {/* tampilan dekstop */}
+          <div className='container my-8 px-6 w-full md:flex justify-center hidden gap-3'>
+            <img src={ImgMobile} className='w-1/3' alt="" />
+            <img src={ImgMobile} className='w-1/3' alt="" />
           </div>
 
           <div className='container px-6 my-8 flex justify-center md:hidden'>
@@ -44,6 +75,22 @@ const App = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* konten fitur  */}
+        <div className='container mx-auto hidden md:block'>
+          <div className='px-6 text-center mt-24'>
+            <h1 className='font-extrabold text-2xl'>What’s Pejuang TB Apps</h1>
+            <p className='py-3'>
+              Aplikasi Pejuang TB menemani proses kesembuhan TB Anda dan membantu <br />
+              temukan teman seperjuangan untuk sembuh TB
+            </p>
+          </div>
+          <div className='grid grid-cols-3 gap-8 py-5 px-[100px]'>
+            <Card image="src/assets/icons/capsule-white.svg" title="Pengingat Minum Obat" />
+            <Card image="src/assets/icons/book-add.svg" title="Pengingat Minum Obat" />
+            <Card image="src/assets/icons/capsule-white.svg" title="Pengingat Minum Obat" />
           </div>
         </div>
       </PageLayouts>

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../elements/Button";
 
+//Penggunaan nasted Component
 const CardBlog = (props) => {
   const { children } = props;
 
@@ -28,7 +29,7 @@ const Body = ( props ) => {
     <div className="px-4 pt-4 border-4 border-white border-t-indigo-500">
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-sm text-textgrey flex-grow">
-        { children }
+        { children } 
       </p>
     </div>
   )
